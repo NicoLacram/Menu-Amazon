@@ -7,8 +7,8 @@
 body{
      background-color: #EAEDED;
      font-family: Arial, Helvetica, sans-serif;
-
 }
+
 a{
     text-decoration: none;
 }
@@ -121,7 +121,7 @@ main article{
     grid-auto-rows: 1fr;
     grid-template-areas: "categorias subcategorias subcategorias subcategorias";
 }
-.grid .activo{
+.grid.activo{
     display: grid;
 }
 .grid::before{
@@ -136,7 +136,7 @@ main article{
     left: 65px;
 }
 
-.grid > div{
+.grid > div {
     background: #fff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .10);
 }
@@ -163,6 +163,7 @@ main article{
     grid-area: categorias;
     padding-top: 10px;
     min-height: 300px;
+    overflow: auto;
 }
 
 .grid .categorias .subtitulo{
@@ -190,5 +191,70 @@ main article{
     display: inline-block;
 }
 
+/*subcategorias*/
+
+.grid .contenedor-subcategorias{
+    grid-area: subcategorias;
+}
+
+.grid .subcategoria{
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+.grid .subcategoria.activo{
+    display: grid;
+}
+
+.grid .subcategoria img{
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+
+}
+.grid .enlaces-categoria{
+    padding-top: 10px;
+    height: 100px;
+    max-height: 300px;
+    overflow: auto;
+
+}
+.grid .enlaces-categoria a{
+    color: #000;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.grid .enlaces-categoria a:hover{
+    color: #E47911;
+
+}
+
+.grid .subtitulo{
+    font-size: 18px;
+    color: #E47911;
+    font-weight: normal;
+    padding: 10px 20px;
+}
+
+.grid .banner-subcategoria a{
+    display: block;
+    height: 100%;
+
+}
+
+.grid .galeria-subcategoria{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:start;
+}
+
+.grid .galeria-subcategoria a{
+    width: 50%;
+    height: 50%;
+}
 
 
