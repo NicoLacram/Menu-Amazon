@@ -1,5 +1,5 @@
 const btnDepartamentos = document.getElementById('btn-departamentos'),
-     grid = document.getElementById('grid');
+     grid = document.getElementById('grid'),
      esMovil = () => window.innerWidth <= 800;
 
 btnDepartamentos.addEventListener('mouseover',() =>{
